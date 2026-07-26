@@ -1002,7 +1002,7 @@ body.cursor-click .cursor-ring { width: 44px; height: 44px; opacity: 1; }
   justify-content: center;
   width: auto;
   height: auto;
-  max-width: 440px;
+  max-width: 420px;
   max-height: 400px;
 }
 
@@ -1030,7 +1030,7 @@ body.cursor-click .cursor-ring { width: 44px; height: 44px; opacity: 1; }
   color: #111;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
-  margin-top: -36px;
+  margin-top: -55px;
   cursor: pointer;
   position: relative;
 }
@@ -1418,7 +1418,7 @@ body.cursor-click .cursor-ring { width: 44px; height: 44px; opacity: 1; }
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .hero-greeting { font-size: 24px; margin-top: 0; }
-  .memoji-card   { max-width: 260px; max-height: 260px; }
+  .memoji-card   { max-width: 290px; max-height: 290px; }
   .cta-btn       { font-size: 16px; padding: 11px 22px; margin-top: 0; }
 
   .shape-orange-pyramid  { width: 140px; height: 105px; left: 2%; }
@@ -1456,7 +1456,7 @@ body.cursor-click .cursor-ring { width: 44px; height: 44px; opacity: 1; }
 
 @media (max-width: 360px) {
   .hero-greeting  { font-size: 17px; margin-top: 0; }
-  .memoji-card    { max-width: 210px; max-height: 210px; }
+  .memoji-card    { max-width: 200px; max-height: 200px; }
   .cta-btn        { font-size: 13px; padding: 9px 16px; margin-top: 4px; }
   .marquee-item   { font-size: 13px; padding: 0 16px; }
   .scroll-indicator { display: none; }
