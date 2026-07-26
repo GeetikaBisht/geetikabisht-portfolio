@@ -5572,3 +5572,148 @@ body.cursor-click .cursor-ring { width: 44px; height: 44px; opacity: 1; }
     padding-top: 20px;
   }
 }
+
+/* ══════════════════════════════════════════════
+   LARGE SCREEN SCALE-UP — 1440px+ (laptops/desktops)
+══════════════════════════════════════════════ */
+@media (min-width: 1440px) {
+  /* ===== GLOBAL TOKENS ===== */
+  :root {
+    --section-pad-y: 120px;
+    --h2-size: clamp(30px, 4vw, 58px);
+  }
+ 
+  /* ===== NAVBAR ===== */
+  .navbar-inner  { max-width: 1400px; padding: 0 32px; height: 64px; }
+  .navbar-brand  { font-size: 23px; }
+  .nav-item      { font-size: 16px; padding: 9px 18px; }
+  .navbar-cta    { font-size: 15px; padding: 10px 24px; }
+ 
+  /* ===== HERO ===== */
+  .hero-greeting        { font-size: 40px; }
+  .memoji-card          { max-width: 520px; max-height: 460px; }
+  .cta-btn              { font-size: 23px; padding: 15px 32px; }
+  .bg-text              { font-size: clamp(26px, 6.2vw, 92px); }
+  .marquee-item         { font-size: 19px; padding: 0 28px; }
+  .scroll-indicator     { bottom: 120px; }
+ 
+  .shape-orange-pyramid { width: 320px; height: 240px; }
+  .shape-teal-star      { width: 250px; height: 250px; }
+  .shape-purple-sphere  { width: 280px; height: 245px; }
+  .shape-green-cube     { width: 270px; height: 245px; }
+  .shape-blue-cylinder  { width: 270px; height: 265px; }
+  .shape-yellow-cube    { width: 250px; height: 250px; }
+ 
+  /* ===== ABOUT ===== */
+  .about-stack { max-width: 1250px; height: 320px; }
+  .about-card  { padding: 26px 34px 24px; }
+  .card-title  { font-size: clamp(1.4rem, 2.2vw, 1.9rem); }
+  .card-text   { font-size: 18px; }
+ 
+  /* ===== SKILLS ===== */
+  .sk-groups,
+  .sk-cards-grid,
+  .sk-new-body,
+  .sk-card,
+  .sk-body      { max-width: 1300px; }
+  .skb-grid     { max-width: 1250px; }
+  .sk-accordion { max-width: 1000px; }
+  .stat-value   { font-size: 2.3rem; }
+  .skc__title   { font-size: 19px; }
+ 
+  /* ===== STACK ===== */
+  .stack-grid { max-width: 1050px; gap: 115px; }
+  .stack-item { height: 300px; }
+  .stack-name { font-size: 23px; }
+ 
+  .st-shape-redish-diamond { width: 270px; height: 260px; }
+  .st-shape-orange-circle  { width: 270px; height: 245px; }
+  .st-shape-green-cube     { width: 260px; height: 245px; }
+ 
+  /* ===== PROJECTS ===== */
+  .ps-container      { max-width: 1400px; padding: 0 48px; }
+  .ps-sub-num        { font-size: 4.4rem; }
+  .ps-sub-title      { font-size: 1.8rem; }
+  .ps-projects-grid  { gap: 24px; }
+  .ui-bento-grid,
+  .ui-bento-grid--cols-2 { grid-auto-rows: 340px; }
+  .gd-cat-card:nth-child(1),
+  .gd-cat-card:nth-child(2)   { height: 340px; }
+  .card-title        { font-size: 20px; }
+  .card-description  { font-size: 13.5px; }
+ 
+  .ps-shape-1 { width: 290px; }
+  .ps-shape-2 { width: 250px; }
+  .ps-shape-3 { width: 250px; }
+  .ps-shape-4 { width: 250px; }
+ 
+  /* ===== EXPERIENCE ===== */
+  .exp-timeline    { max-width: 1250px; padding-left: 56px; }
+  .exp-card__role  { font-size: 18px; }
+  .exp-logo        { width: 50px; height: 50px; font-size: 22px; }
+  .exp-shape-1,
+  .exp-shape-2     { width: 230px; }
+ 
+  /* ===== CONTACT ===== */
+  .contact-wrapper   { padding: 70px 64px; }
+  .headline-word     { font-size: clamp(56px, 9vw, 92px); }
+  .contact-info      { max-width: 440px; }
+  .icon-circle       { width: 52px; height: 52px; }
+  .contact-value     { font-size: 16.5px; }
+  .contact-email-cta { font-size: clamp(22px, 3.4vw, 56px); }
+ 
+  /* ===== FOOTER ===== */
+  .footer       { padding: 20px 56px; }
+  .footer-text  { font-size: 14px; }
+  .footer-brand { font-size: 18px; }
+  .footer-link  { font-size: 13px; }
+}
+ 
+/* ══════════════════════════════════════════════
+   ULTRA-WIDE SCALE-UP — 1920px+ (large monitors)
+══════════════════════════════════════════════ */
+@media (min-width: 1920px) {
+  /* ===== GLOBAL TOKENS ===== */
+  :root {
+    --section-pad-y: 140px;
+    --h2-size: clamp(30px, 3.4vw, 62px);
+  }
+ 
+  /* ===== NAVBAR ===== */
+  .navbar-inner { max-width: 1600px; }
+  .navbar-brand { font-size: 25px; }
+ 
+  /* ===== HERO ===== */
+  .hero-greeting { font-size: 44px; }
+  .memoji-card   { max-width: 580px; max-height: 500px; }
+  .cta-btn       { font-size: 25px; }
+  .bg-text       { font-size: clamp(26px, 6.2vw, 104px); }
+ 
+  /* ===== ABOUT ===== */
+  .about-stack { max-width: 1400px; }
+ 
+  /* ===== SKILLS ===== */
+  .sk-groups,
+  .sk-cards-grid,
+  .sk-new-body,
+  .sk-card,
+  .sk-body   { max-width: 1450px; }
+  .skb-grid  { max-width: 1380px; }
+ 
+  /* ===== STACK ===== */
+  .stack-grid { max-width: 1180px; gap: 130px; }
+ 
+  /* ===== PROJECTS ===== */
+  .ps-container { max-width: 1600px; }
+ 
+  /* ===== EXPERIENCE ===== */
+  .exp-timeline { max-width: 1400px; }
+ 
+  /* ===== CONTACT ===== */
+  .contact-wrapper   { padding: 80px 90px; }
+  .headline-word     { font-size: clamp(56px, 9vw, 104px); }
+  .contact-email-cta { font-size: clamp(22px, 3.4vw, 64px); }
+ 
+  /* ===== FOOTER ===== */
+  .footer { padding: 24px 72px; }
+}
