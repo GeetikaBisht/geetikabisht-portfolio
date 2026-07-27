@@ -180,7 +180,7 @@ export default function Navbar() {
                 <span className="resume-modal__title">Resume</span>
                 <div className="resume-modal__actions">
                   <a
-                    href="/GeetikaBishtResume.pdf"
+                    href="/GeetikaBharatBisht.pdf"
                     download
                     className="resume-download-btn"
                   >
@@ -218,7 +218,7 @@ export default function Navbar() {
               </div>
               <div className="resume-modal__body">
                 <iframe
-                  src="/GeetikaBishtResume.pdf#toolbar=0&navpanes=0&scrollbar=1"
+                  src="/GeetikaBharatBisht.pdf#toolbar=0&navpanes=0&scrollbar=1"
                   title="Resume"
                   className="resume-iframe"
                 />
