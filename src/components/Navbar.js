@@ -22,11 +22,13 @@ export default function Navbar() {
   // Lock body scroll when resume modal is open
   useEffect(() => {
     if (resumeOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     }
-    return () => { document.body.style.overflow = ''; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [resumeOpen]);
 
   // Track scroll for navbar shadow / blur + progress bar
@@ -79,7 +81,9 @@ export default function Navbar() {
   };
 
   return (
-    <header className={`navbar-fixed ${scrolled ? "navbar-fixed--scrolled" : ""}`}>
+    <header
+      className={`navbar-fixed ${scrolled ? "navbar-fixed--scrolled" : ""}`}
+    >
       <nav className="navbar-inner">
         {/* Logo / Brand */}
         <a
@@ -110,12 +114,19 @@ export default function Navbar() {
         {/* Resume CTA */}
         <button className="navbar-cta" onClick={() => setResumeOpen(true)}>
           Resume
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-            <polyline points="14 2 14 8 20 8"/>
-            <line x1="16" y1="13" x2="8" y2="13"/>
-            <line x1="16" y1="17" x2="8" y2="17"/>
-            <polyline points="10 9 9 9 8 9"/>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+            <polyline points="10 9 9 9 8 9" />
           </svg>
         </button>
 
@@ -132,7 +143,10 @@ export default function Navbar() {
       </nav>
 
       {/* Scroll progress bar */}
-      <div className="scroll-progress-bar" style={{ width: `${scrollProgress}%` }} />
+      <div
+        className="scroll-progress-bar"
+        style={{ width: `${scrollProgress}%` }}
+      />
 
       {/* Mobile Drawer */}
       <div className={`mobile-drawer ${menuOpen ? "mobile-drawer--open" : ""}`}>
@@ -148,45 +162,71 @@ export default function Navbar() {
         ))}
         <button
           className="mobile-nav-item mobile-nav-item--resume"
-          onClick={() => { setMenuOpen(false); setResumeOpen(true); }}
+          onClick={() => {
+            setMenuOpen(false);
+            setResumeOpen(true);
+          }}
         >
           Resume
         </button>
       </div>
 
       {/* Resume Modal — portal so it's above everything */}
-      {resumeOpen && ReactDOM.createPortal(
-        <div className="resume-backdrop" onClick={() => setResumeOpen(false)}>
-          <div className="resume-modal" onClick={e => e.stopPropagation()}>
-            <div className="resume-modal__head">
-              <span className="resume-modal__title">Resume</span>
-              <div className="resume-modal__actions">
-                <a href="/GeetikaBishtResume.pdf" download className="resume-download-btn">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                    <polyline points="7 10 12 15 17 10"/>
-                    <line x1="12" y1="15" x2="12" y2="3"/>
-                  </svg>
-                  Download
-                </a>
-                <button className="resume-close-btn" onClick={() => setResumeOpen(false)} aria-label="Close">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M1 1L13 13M13 1L1 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                  </svg>
-                </button>
+      {resumeOpen &&
+        ReactDOM.createPortal(
+          <div className="resume-backdrop" onClick={() => setResumeOpen(false)}>
+            <div className="resume-modal" onClick={(e) => e.stopPropagation()}>
+              <div className="resume-modal__head">
+                <span className="resume-modal__title">Resume</span>
+                <div className="resume-modal__actions">
+                  <a
+                    href="/GeetikaBBishtResume.pdf"
+                    download
+                    className="resume-download-btn"
+                  >
+                    <svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="7 10 12 15 17 10" />
+                      <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    Download
+                  </a>
+                  <button
+                    className="resume-close-btn"
+                    onClick={() => setResumeOpen(false)}
+                    aria-label="Close"
+                  >
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path
+                        d="M1 1L13 13M13 1L1 13"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div className="resume-modal__body">
+                <iframe
+                  src="/GeetikaBBishtResume.pdf#toolbar=0&navpanes=0&scrollbar=1"
+                  title="Resume"
+                  className="resume-iframe"
+                />
               </div>
             </div>
-            <div className="resume-modal__body">
-              <iframe
-                src="/GeetikaBishtResume.pdf#toolbar=0&navpanes=0&scrollbar=1"
-                title="Resume"
-                className="resume-iframe"
-              />
-            </div>
-          </div>
-        </div>,
-        document.body
-      )}
+          </div>,
+          document.body,
+        )}
     </header>
   );
 }
